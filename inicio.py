@@ -5,6 +5,15 @@ while ligado:
     valor = 0
     i = 0
     active = True
+    # ----------------------------------------------------
+    # iniciando nova forma de iterar no nome e obter os valores!
+    # ----------------------------------------------------
+    # local = 0
+    # lista = [" ","aáãjs","bkt","cçlu","dmv","eénw","foõôx","gpy","hqz","ir"]
+    # for x in nome:
+    #     for y in lista:
+    #         if x in y:
+
     while i < len(nome):
         if nome[i] in "aáãjs":
             valor = valor + 1
