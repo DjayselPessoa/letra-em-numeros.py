@@ -35,7 +35,7 @@ while i < len(nome):
         elif nome[i] in " ":
             pass
         else:
-            raise ValueError(" - caractere especial detectado!")
+            raise ValueError(" - caractere especial detectado!\n Reinicie a aplicação")
         i += 1
     except ValueError as e:
         print("Inválido!", e)
