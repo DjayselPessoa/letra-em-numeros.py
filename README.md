@@ -2,6 +2,8 @@
 
 corrigido todo o código, tornando a função realmente efetiva
 
+- Agora a aplicação pergunta se deseja sair.
+- Nomes com caracteres especiais diferentes dos permitidos farão a aplicação parar a verificação e perguntar se deseja continuar
 - foi deletado um folder que se tornou desnecessário
 - foi corrigido os loopins internos e de fato agora o código chega a um único dígito final da soma das letras e posterior soma das partes do valor transformando-as em unidades.
 - tratamento de tipos de caracteres incluindo algumas outras opções e utilizando uma forma mais direta
