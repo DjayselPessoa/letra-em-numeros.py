@@ -1,55 +1,62 @@
-from folder1.funcaoExt1 import calculo
-iT = str(input("INFORME SEU NOME: "))
-iT = iT.lower()
+nome = str(input("INFORME SEU NOME: "))
+nome = nome.lower()
 valor = 0
-valorN = 0
 i = 0
 
-
-while i < len(iT):
+while i < len(nome):
     try:
-        if iT[i] == "a" or iT[i] == "ã" or iT[i] == "j" or iT[i] == "s":
+        if nome[i] in "aáãjs":
             valor = valor + 1
-            print(iT[i], valor)
-        elif iT[i] == "b" or iT[i] == "k" or iT[i] == "t":
+            print(f" {nome[i]}  -> {1} : {valor} ")
+        elif nome[i] in "bkt":
             valor = valor + 2
-            print(iT[i], valor)
-        elif iT[i] == "c" or iT[i] == "ç" or iT[i] == "l" or iT[i] == "u":
+            print(f" {nome[i]}  -> {2} : {valor} ")
+        elif nome[i] in "cçlu":
             valor = valor + 3
-            print(iT[i], valor)
-        elif iT[i] == "d" or iT[i] == "m" or iT[i] == "v":
+            print(f" {nome[i]}  -> {3} : {valor} ")
+        elif nome[i] in "dmv":
             valor = valor + 4
-            print(iT[i], valor)
-        elif iT[i] == "e" or iT[i] == "é" or iT[i] == "n" or iT[i] == "w":
+            print(f" {nome[i]}  -> {4} : {valor} ")
+        elif nome[i] in "eénw":
             valor = valor + 5
-            print(iT[i], valor)
-        elif iT[i] == "f" or iT[i] == "o" or iT[i] == "õ" or iT[i] == "ô" or iT[i] == "x":
+            print(f" {nome[i]}  -> {5} : {valor} ")
+        elif nome[i] in "foõôx":
             valor = valor + 6
-            print(iT[i], valor)
-        elif iT[i] == "g" or iT[i] == "p" or iT[i] == "y":
+            print(f" {nome[i]}  -> {6} : {valor} ")
+        elif nome[i] in "gpy":
             valor = valor + 7
-            print(iT[i], valor)
-        elif iT[i] == "h" or iT[i] == "q" or iT[i] == "z":
+            print(f" {nome[i]}  -> {7} : {valor} ")
+        elif nome[i] in "hqz":
             valor = valor + 8
-            print(iT[i], valor)
-        elif iT[i] == "i" or iT[i] == "r":
+            print(f" {nome[i]}  -> {8} : {valor} ")
+        elif nome[i] in "ir":
             valor = valor + 9
-            print(iT[i], valor)
-        elif iT[i] == " ":
-            valorN = valorN + valor
-            print(valorN)
-            valor = 0
+            print(f" {nome[i]}  -> {9} : {valor} ")
+        elif nome[i] in " ":
+            pass
         else:
             raise ValueError(" - caractere especial detectado!")
         i += 1
     except ValueError as e:
         print("Inválido!", e)
         break
-
-if i == len(iT) and iT[i - 1] == " ":
-    print(valorN)
-    print(calculo(valorN))
-else:
-    valor2 = valorN + valor
-    print(valorN + valor)
-    print(calculo(valor2))
+cont1 = 0
+cont2 = 0
+print(f"valor parcial: {valor}")
+active = True
+while active:
+    print("partes em unidade: ")
+    for i in str(valor):
+        # print(f"valor: {len(str(valor))}")
+        cont1 = cont1 + int(i)
+        print(f"{cont2 + 1}º valor : {str(i)}")
+        cont2 = cont2 + 1
+    valor = int(cont1)
+    cont1 = 0
+    cont2 = 0
+    if len(str(valor)) >= 2:
+        print("valor atual: " + str(valor))
+        continue
+    elif len(str(valor)) == 1:
+        break
+print("Valor final é: " + str(valor))
