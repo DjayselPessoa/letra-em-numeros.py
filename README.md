@@ -2,6 +2,9 @@
 
 corrigido todo o código, tornando a função realmente efetiva
 
+update #09:
+- alterado a forma de iterar no nome e obter os valores. utilizando agora dois loopings for numa lista com as opções no lugar de vários ifs para obter o mesmo resultado
+
 - Agora a aplicação pergunta se deseja sair.
 - Nomes com caracteres especiais diferentes dos permitidos farão a aplicação parar a verificação e perguntar se deseja continuar
 - foi deletado um folder que se tornou desnecessário
