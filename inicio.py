@@ -98,6 +98,7 @@ while ligado:
         escolha = str(input("Informe \'S\' para sair ou \'C\' para continuar:"))
         if escolha not in "SsCc":
             print("O programa será finalizado!")
+            ligado = False
         else:
             if escolha in "Cc":
                 continue
@@ -108,6 +109,7 @@ while ligado:
         escolha = str(input("Informe \'S\' para sair ou \'C\' para continuar:"))
         if escolha not in "SsCc":
             print("O programa será finalizado!")
+            ligado = False
         else:
             if escolha in "Cc":
                 continue
